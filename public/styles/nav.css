@@ -1,0 +1,28 @@
+
+
+/* general nav-bar styling*/
+nav#nav-bar {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding-left: 2em;
+  padding-right: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+/*logo in the nav bar */
+nav img.logo {
+  height: 80px;
+  width: 80px;
+  float: left;
+ }
+
+/* tweeter font in the nav-bar*/
+span.header {
+  font-size: xx-large;
+ }
+
