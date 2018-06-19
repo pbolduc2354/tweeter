@@ -1,0 +1,31 @@
+/*Compose tweet styling -- ligne en dessous de compose tweet*/
+ h2#compose-tweet {
+  border-bottom: 1px solid;
+ }
+
+/*zone derriere compose tweet styling*/
+ section.new-tweet {
+  background-color: #d3d3d361;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 10px;
+  border: 1px solid #80808029;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 40px;
+ }
+
+/*writting bar go 100% of the space in the blocks*/
+textarea[name="text"] {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+/*elements go under the writing bar (tweet & 140)*/
+ form[action="tweets"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 10px;
+ }
