@@ -1,0 +1,71 @@
+
+/*style général de la section*/
+section#tweet-container {
+  border: 1px solid #80808038;
+  margin-left: 2em;
+  border-radius: 10px;
+  margin-right: 2em;
+}
+
+img.user {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+header.profil-info {
+  background-color: #eeeeee;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  opacity: 0.7;
+}
+
+
+footer.time-pass {
+  padding: 10px;
+  border-top: 1px solid #e3e3e3;
+}
+
+p.post-text {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+span.footer-text {
+  font-size: small;
+}
+
+span.user-name{
+  font-size: small;
+
+}
+
+span.profil-name {
+  margin-right: 150px;
+  font-size: large;
+  font-weight: bold;
+}
+
+article:hover header.profil-info {
+  opacity: 1;
+}
+
+.footer-icon {
+  opacity:0;
+}
+
+.first-icon {
+  margin-left: 240px;
+}
+
+article:hover .footer-icon {
+  opacity: 1;
+  color: #01a087;
+}
+
+
+
