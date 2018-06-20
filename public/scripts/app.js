@@ -55,9 +55,10 @@ const data = [
 $(document).ready(function() {
 
 function renderTweets (tweetData) {
+  $('#tweets-container').empty();
   for (let article of tweetData) {
     var $tweet = createTweetElement(article);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   }
 }
 
@@ -104,6 +105,30 @@ return $tweet;
 }
 
 // Test / driver code (temporary)
-renderTweets(data);
+loadTweets();
+
+// empêcher le boutton de retourner a la page /tweet
+  $("form").on('submit', function(event) {
+    event.preventDefault();
+      $.ajax({
+        method: 'POST',
+        url: 'http://localhost:8080/tweets',
+        data: $(this).serialize(),
+        success: function(response) {
+          loadTweets();
+        }
+
+      })
+  });
+
+  function loadTweets() {
+    $.ajax({
+      url: '/tweets',
+      type: 'GET',
+      success: renderTweets
+    });
+  }
 
 });
+
+
