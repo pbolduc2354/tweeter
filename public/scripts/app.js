@@ -35,7 +35,7 @@ function createTweetElement (tweet) {
 
   let $footer = $("<footer>").addClass("time-pass");
 
-  let $span3 = $("<span>").addClass("footer-text").text(tweet.created_at);
+  let $span3 = $("<span>").addClass("footer-text").text(moment(tweet.created_at).fromNow());
 
   let $icon1 = $("<i>").addClass("fas fa-flag footer-icon first-icon");
 
@@ -70,8 +70,10 @@ loadTweets();
         url: 'http://localhost:8080/tweets',
         data: $(this).serialize(),
         success: function(response) {
-          if($(this) && 140 > $(this)["0"].data.length - 5){
+          if($(this) && 140 >= $(this)["0"].data.length - 5){
            loadTweets();
+           $("#textBox").val("");
+           $(".counter").html(140);
           } else {
             alert("Enter a valid message.")
           }
