@@ -41,14 +41,15 @@
   <nav id="nav-bar">
     <img class="logo" src="/images/bird.png">
     <span class="header">Tweeter</span>
+    <input type="submit" value="compose" class="compose-btn">
   </nav>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
       <h2 id="compose-tweet">Compose Tweet</h2>
-      <form id="test" action="tweets" method="POST">
-        <textarea id="textBox" name="text" placeholder="What are you humming about?"></textarea>
+      <form id="test" action="tweets" method="POST" >
+        <textarea id="textBox" name="text" placeholder="What are you humming about?" autofocus></textarea>
         <input type="submit" value="Tweet" class="send-btn">
         <span class="counter">140</span>
       </form>

@@ -25,3 +25,32 @@ span.header {
   font-size: xx-large;
  }
 
+input.compose-btn {
+    margin-left: 35em;
+    align-self: auto;
+    width: 7em;
+    height: 3em;
+    border-radius: 8px;
+    border-style: solid;
+    border: solid 1.5px black;
+    background-color: white;
+    opacity: 0.6;
+    color:#00a087;
+    font-size: large;
+}
+
+
+input.compose-btn:hover {
+  opacity:1;
+}
+
+
+
+
+
+
+
+
+
+
+
