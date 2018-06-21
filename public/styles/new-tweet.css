@@ -30,3 +30,7 @@ textarea[name="text"] {
   justify-content: space-between;
   padding-bottom: 10px;
  }
+
+ .post-text {
+  overflow-wrap: break-word;
+ }
