@@ -26,10 +26,10 @@ span.header {
  }
 
 input.compose-btn {
-    margin-left: 35em;
+    margin-left: 35rem;
     align-self: auto;
-    width: 7em;
-    height: 3em;
+    width: 7rem;
+    height: 3rem;
     border-radius: 8px;
     border-style: solid;
     border: solid 1.5px black;
