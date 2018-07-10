@@ -65,23 +65,23 @@ loadTweets();
 // empêcher le boutton de retourner a la page /tweet
   $("form").on('submit', function(event) {
     event.preventDefault();
-      $.ajax({
-        method: 'POST',
-        url: 'http://localhost:8080/tweets',
-        data: $(this).serialize(),
-        success: function(response) {
-          if($(this) && 140 >= $(this)["0"].data.length - 5){
-           loadTweets();
-           $("#textBox").val("");
-           $(".counter").html(140);
-          } else {
-            alert("Enter a valid message.")
-          }
-        }
-
-      })
-  });
-
+      if ($('#textBox').val().length === 0) {
+            alert('You cannot tweet nothing!')
+        } else if ($('#textBox').val().length > 140) {
+            alert('Your tweet must be 140 characters maximum!')
+        } else {
+            $.ajax({
+              method: 'POST',
+              url: '/tweets',
+              data: $(this).serialize(),
+                })
+            .done(function() {
+              $('#textBox').val('');
+              $('.counter').html(140);
+              loadTweets();
+            });
+        };
+    });
   function loadTweets() {
     $.ajax({
       url: '/tweets',
